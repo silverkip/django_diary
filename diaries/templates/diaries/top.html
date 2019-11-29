@@ -13,10 +13,10 @@
 <div>
     <h1>Welcome to Diary App</h1>
     <div>
-      <a class="btn btn-link" href="/diaries">Browse Diaries</a>
+      <a class="btn btn-link" href="{% url 'entries' %}">Browse Diaries</a>
     </div>
     <div>
-      <button class="btn btn-primary">Add Diary Entry</button>
+      <a class="btn btn-primary" href="{% url 'write' %}">Add Diary Entry</a>
     </div>
 </div>
 </body>

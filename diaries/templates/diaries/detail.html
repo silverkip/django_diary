@@ -13,11 +13,12 @@
   <div>
    <h1>{{ entry.title }}</h1>
     <small>{{ entry.date }}</small>
+    <small>(Posted at {{ entry.created }})</small>
     <br>
     </p>{{ entry.content | linebreaksbr }}</p>
-  <div>
-  <div class="text-center">
-    <a class="btn btn-primary" href="..">Back to Top</a>
+  </div>
+  <div class="text-center fixed-bottom mb-4">
+    <a class="btn btn-primary" href="{% url 'entries' %}">Back to List</a>
   </div>
 </body>
 </html>

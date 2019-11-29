@@ -23,12 +23,13 @@
     {% endfor %}
     </table>
     {% else %}
-    <p>No diary entries</p>
+    <br>
+    <h5 class="text-center">No diary entries</h5>
     {% endif %}
   </div>
   <br>
   <div class="text-center">
-    <a class="btn btn-primary" href="..">Back to Top</a>
+    <a class="btn btn-primary" href="{% url 'top' %}">Back to Top</a>
   </div>
 </body>
 </html>
