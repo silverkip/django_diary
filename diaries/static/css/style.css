@@ -1,0 +1,27 @@
+body {
+    background-color:#e0e0e0;
+}
+
+table.entries {
+    border-collapse: collapse;
+    margin : 0 auto;
+}
+
+table.entries tr {
+    border-bottom: 2px solid;
+}
+
+td.entry-name{
+    width:50%;
+    text-decoration: underline;
+}
+
+td.update{
+    text-decoration: underline;
+    color:blue;
+}
+
+td.delete{
+    text-decoration: underline;
+    color:red;
+}
