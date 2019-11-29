@@ -7,3 +7,10 @@ class Diary(models.Model):
   date = models.DateField(default=datetime.now())
   created = models.DateTimeField(default=datetime.now())
   edited = models.DateTimeField(null=True,  blank=True)
+  user = models.ForeignKey(
+    'User',
+    on_delete=models.CASCADE,
+    default=1,
+  )
+class User(models.Model):
+  name = models.TextField(unique=True)
