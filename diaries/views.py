@@ -25,7 +25,20 @@ def write(request):
     return render(request, 'diaries/write.html')
 
 def update(request, diary_id):
-    return redirect('detail', diary_id)
+    try:
+        entry = Diary.objects.get(pk=diary_id)
+    except Diary.DoesNotExist:
+        raise Http404("Entry does not exist.")
+    if request.method == "POST":
+        entry.content = request.POST['content']
+        entry.title = request.POST['title']
+        entry.edited = datetime.now()
+        entry.save()
+        return redirect('detail', diary_id)
+    context = {
+        'entry': entry,
+    }
+    return render(request, 'diaries/update.html', context)
 
 def details(request, diary_id):
     try:

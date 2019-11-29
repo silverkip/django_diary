@@ -12,8 +12,12 @@
 <body class="p-4 mt-4">
   <div>
    <h1>{{ entry.title }}</h1>
-    <small>{{ entry.date }}</small>
-    <small>(Posted at {{ entry.created }})</small>
+    <small class="small">{{ entry.date | date:'Y-m-d' }}</small>
+    <small class="small">(Posted at {{ entry.created }})</small>
+    {% if entry.edited %}
+    <br>
+    <small class="small">Last edited {{ entry.edited }}</small>
+    {% endif %}
     <br>
     </p>{{ entry.content | linebreaksbr }}</p>
   </div>

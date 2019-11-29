@@ -11,17 +11,22 @@ table.entries tr {
     border-bottom: 2px solid;
 }
 
-td.entry-name{
+td.entry-name {
     width:50%;
     text-decoration: underline;
 }
 
-td.update{
+td.update {
     text-decoration: underline;
     color:blue;
 }
 
-td.delete{
+td.delete {
     text-decoration: underline;
     color:red;
+}
+
+textarea.noresize {
+    resize: none;
+    height: 75%;
 }

@@ -6,3 +6,4 @@ class Diary(models.Model):
   content = models.TextField(default="")
   date = models.DateField(default=datetime.now())
   created = models.DateTimeField(default=datetime.now())
+  edited = models.DateTimeField(null=True,  blank=True)
